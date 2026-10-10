@@ -15,6 +15,7 @@
   --light-gray: #0b1724;
 
   /* Page / theme tokens (dark as default) */
+  --accent-color: var(--brand-orange);
   --page-bg: var(--black);
   --header-bg: var(--black);
   --social-bg: #253b4d;
@@ -93,7 +94,7 @@ h﻿tml, body {
 
 a {
   display: inline;
-  color: var(--brand-orange);
+  color: var(--accent-color);
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-underline-offset: 3px;
@@ -445,7 +446,7 @@ header { position: static; width: 100%; background: var(--bg); }
 .sidebar-footer a:focus-visible,
 .mobile-footer a:hover,
 .mobile-footer a:focus-visible {
-  color: var(--brand-orange);
+  color: var(--accent-color);
 }
 
 .side-section + .side-section {
@@ -458,7 +459,7 @@ header { position: static; width: 100%; background: var(--bg); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--brand-orange);
+  color: var(--accent-color);
   margin: 0 0 12px;
 }
 
@@ -684,7 +685,7 @@ header { position: static; width: 100%; background: var(--bg); }
 
 /* accordion button highlighted */
 .acc-btn.is-active {
-  background: var(--brand-orange);
+  background: var(--accent-color);
   color: var(--white);
   box-shadow: none;
 }
@@ -693,7 +694,7 @@ header { position: static; width: 100%; background: var(--bg); }
 /* Full-element "lit" state (higher specificity) */
 .accordion .acc-btn.is-active,
 .accordion .acc-btn.is-active * {
-  background: var(--brand-orange) !important;
+  background: var(--accent-color) !important;
   color: var(--white) !important;
   box-shadow: none !important;
 }
@@ -707,14 +708,14 @@ header { position: static; width: 100%; background: var(--bg); }
 /* Sidebar links and icon buttons full-bg */
 #sidebar .side-link.is-active,
 #sidebar .side-link.active {
-  background: var(--brand-orange) !important;
+  background: var(--accent-color) !important;
   color: var(--white) !important;
   box-shadow: 0 4px 14px rgba(0,0,0,0.10) !important;
 }
 
 .icon-btn.is-active,
 .icon-btn.is-active * {
-  background: var(--brand-orange) !important;
+  background: var(--accent-color) !important;
   color: var(--white) !important;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12) !important;
 }
@@ -781,7 +782,7 @@ header { position: static; width: 100%; background: var(--bg); }
 .acc-btn:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgba(214,108,44,0.4), inset 0 0 0 2px rgba(214,108,44,0.2);
-  border-color: var(--brand-orange);
+  border-color: var(--accent-color);
 }
 
 .acc-btn:focus:not(:focus-visible) {
@@ -803,7 +804,7 @@ header { position: static; width: 100%; background: var(--bg); }
 /* Keyboard navigation visual enhancements */
 .side-link[aria-current="true"] {
   background: rgba(214,108,44,0.15);
-  border-left: 3px solid var(--brand-orange);
+  border-left: 3px solid var(--accent-color);
 }
 
 .question-display:focus-visible {
@@ -921,7 +922,7 @@ body.keyboard-navigation::after {
 }
 
 .error-state h2 {
-  color: var(--brand-orange);
+  color: var(--accent-color);
   margin-bottom: 16px;
   font-size: var(--font-xl);
 }
@@ -933,7 +934,7 @@ body.keyboard-navigation::after {
 }
 
 .error-retry-btn {
-  background: var(--brand-orange);
+  background: var(--accent-color);
   color: var(--white);
   border: none;
   padding: 12px 24px;
@@ -1169,7 +1170,7 @@ body.keyboard-navigation::after {
   }
 
   .mobile-footer a:hover,
-  .mobile-footer a:focus-visible { color: var(--brand-orange); }
+  .mobile-footer a:focus-visible { color: var(--accent-color); }
 }
 
 /* ===== ACCESSIBILITY / FOCUS (CONSOLIDATED) =====
@@ -1178,7 +1179,7 @@ body.keyboard-navigation::after {
 .acc-btn:focus { outline: none; }
 
 .acc-btn:focus-visible {
-  box-shadow: 0 0 0 3px var(--brand-orange);
+  box-shadow: 0 0 0 3px var(--accent-color);
   border-radius: 10px;
   z-index: 4;
 }
@@ -1192,7 +1193,7 @@ body.keyboard-navigation::after {
   top: 8px;
   bottom: 8px;
   border-radius: 8px;
-  box-shadow: 0 0 0 3px var(--brand-orange);
+  box-shadow: 0 0 0 3px var(--accent-color);
   opacity: 0;
   pointer-events: none;
   transition: opacity .12s ease;
