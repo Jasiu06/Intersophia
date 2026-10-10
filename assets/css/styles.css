@@ -281,12 +281,7 @@ header { position: static; width: 100%; background: var(--bg); }
   width: auto;
   display: block;
   transition: max-width 0.3s, height 0.3s;
-  aspect-ratio: 1027 / 257;
   display: block;
-
-  background-color: var(--accent-color);
-  -webkit-mask: url("../logo.svg") left center / contain no-repeat;
-          mask: url("../logo.svg") left center / contain no-repeat;
 }
 
 @media (max-width: 600px) {
