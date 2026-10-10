@@ -229,6 +229,7 @@ p {
   top: auto;
   z-index: initial;
   align-self: stretch;
+  flex: none;
 }
 
 .mobile-footer {
@@ -307,7 +308,8 @@ header { position: static; width: 100%; background: var(--bg); }
   overflow-y: auto;
   scrollbar-gutter: stable both-edges;
   min-height: 0;
-  max-height: calc(100vh - var(--header-height) - 162px);
+  max-height: none;
+  flex: 0 1 auto;
 }
 
 .question.card-surface {
@@ -378,8 +380,7 @@ header { position: static; width: 100%; background: var(--bg); }
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-gutter: stable both-edges;
-  align-self: start;
-  max-height: calc(100vh - var(--header-height) - 72px);
+  align-self: stretch;
   border-radius: clamp(18px, 2.6vw, 26px);
   padding: clamp(10px, 1vw, 16px);
   gap: clamp(8px, 1vw, 14px);
@@ -1107,7 +1108,10 @@ body.keyboard-navigation::after {
     --social-size: 82px;
   }
 
-  .layout { display: none; }
+  .layout {
+    display: none;
+    grid-template-rows: minmax(0, 1fr);
+  }
 
   .mobile {
     display: block;
