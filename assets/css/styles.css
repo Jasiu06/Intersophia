@@ -261,11 +261,28 @@ header { position: static; width: 100%; background: var(--bg); }
   box-sizing: border-box;
 }
 
+.logo-banner {
+  width: 100%;
+  height: var(--header-height);
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  background: var(--header-bg);
+}
+
 .logo-banner .logo {
-  width: min(84%, calc((var(--header-height) - 42px) * 1027 / 257));
+  max-width: 84%;
+  max-height: calc(var(--header-height) - 42px);
+  height: auto;
+  width: auto;
+  display: block;
+  transition: max-width 0.3s, height 0.3s;
   aspect-ratio: 1027 / 257;
   display: block;
-  transition: width 0.3s;
 
   background-color: var(--accent-color);
   -webkit-mask: url("../logo.svg") left center / contain no-repeat;
@@ -274,7 +291,8 @@ header { position: static; width: 100%; background: var(--bg); }
 
 @media (max-width: 600px) {
   .logo-banner .logo {
-    width: min(92%, calc((var(--header-height) - 32px) * 1027 / 257));
+    max-width: 92%;
+    max-height: calc(var(--header-height) - 32px);
   }
 }
 
