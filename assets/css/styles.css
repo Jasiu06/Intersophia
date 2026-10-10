@@ -36,7 +36,7 @@
   --header-height: 126px;
   --social-size: 92px;
   --social-gap: 8px;
-  
+
   /* Animation durations - keep in sync with JS CONFIG */
   --animation-duration: 300ms;
   --accordion-transition: 400ms;
@@ -56,7 +56,7 @@
   --accent-gradient: linear-gradient(140deg, rgba(214,108,44,0.32) 0%, rgba(74,147,195,0.26) 100%);
   --accent-ring-orange: rgba(214,108,44,0.18);
   --accent-ring-blue: rgba(74,147,195,0.16);
-  
+
   /* Consolidated RGBA values */
   --shadow-dark: rgba(2,6,23,0.36);
   --shadow-primary: rgba(2,6,23,0.4);
@@ -66,7 +66,7 @@
   --border-medium: rgba(255,255,255,0.08);
   --border-strong: rgba(255,255,255,0.12);
   --overlay-dark: rgba(7,18,38,0.85);
-  
+
   /* Typography Scale - Mobile-first with larger base sizes */
   --font-xs: clamp(12px, 1.2vw, 14px);     /* Fine print, captions - increased from 10-12px */
   --font-sm: clamp(14px, 1.4vw, 16px);     /* Small UI text - increased from 12-14px */
@@ -229,7 +229,6 @@ p {
   top: auto;
   z-index: initial;
   align-self: stretch;
-  flex: none;
 }
 
 .mobile-footer {
@@ -308,8 +307,7 @@ header { position: static; width: 100%; background: var(--bg); }
   overflow-y: auto;
   scrollbar-gutter: stable both-edges;
   min-height: 0;
-  max-height: none;
-  flex: 0 1 auto;
+  max-height: calc(100vh - var(--header-height) - 162px);
 }
 
 .question.card-surface {
@@ -380,7 +378,8 @@ header { position: static; width: 100%; background: var(--bg); }
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-gutter: stable both-edges;
-  align-self: stretch;
+  align-self: start;
+  max-height: calc(100vh - var(--header-height) - 72px);
   border-radius: clamp(18px, 2.6vw, 26px);
   padding: clamp(10px, 1vw, 16px);
   gap: clamp(8px, 1vw, 14px);
@@ -590,7 +589,7 @@ header { position: static; width: 100%; background: var(--bg); }
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
   box-sizing: border-box;
-  
+
   /* Desktop positioning - in layout flow */
   position: static;
 }
@@ -1014,17 +1013,17 @@ body.keyboard-navigation::after {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   .loading-skeleton * {
     animation: none !important;
   }
-  
+
   .content-fade-out,
   .content-fade-in {
     animation: none !important;
     transition: none !important;
   }
-  
+
   .question-animate {
     animation: none !important;
   }
@@ -1038,23 +1037,23 @@ body.keyboard-navigation::after {
     min-height: 48px;  /* Increased from 44px for better touch */
     min-width: 48px;
   }
-  
+
   .icon-btn:active {
     background: rgba(214,108,44,0.2);
     transform: scale(0.95);
   }
-  
+
   .acc-btn:active,
   .side-link:active {
     background: rgba(214,108,44,0.1);
     transform: scale(0.98);
   }
-  
+
   /* Additional mobile typography improvements */
   .acc-body {
     line-height: 1.75; /* More generous line spacing on mobile */
   }
-  
+
   .answer {
     line-height: 1.8; /* Even more generous for main content */
   }
@@ -1067,7 +1066,7 @@ body.keyboard-navigation::after {
   .side-link {
     border: 2px solid currentColor;
   }
-  
+
   .card-surface {
     border: 1px solid var(--border);
   }
@@ -1093,7 +1092,7 @@ body.keyboard-navigation::after {
     height: auto;
     min-height: 100vh;
   }
-  
+
   body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -1108,10 +1107,7 @@ body.keyboard-navigation::after {
     --social-size: 82px;
   }
 
-  .layout {
-    display: none;
-    grid-template-rows: minmax(0, 1fr);
-  }
+  .layout { display: none; }
 
   .mobile {
     display: block;
