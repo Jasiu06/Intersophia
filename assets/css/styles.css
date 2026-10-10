@@ -33,7 +33,7 @@
   --shadow: 0 10px 30px var(--shadow-light);
   --radius: 16;
 
-  --header-height: 126px;
+  --header-height: 150px;
   --social-size: 92px;
   --social-gap: 8px;
 
@@ -1120,7 +1120,7 @@ body.keyboard-navigation::after {
   .socials-mobile {
     position: -webkit-sticky;
     position: sticky;
-    top: -1px;
+    top: 6px;
     z-index: 1000;
     justify-content: space-around;
     margin-bottom: 16px;
